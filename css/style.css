@@ -1,0 +1,818 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #176b3a;
+    --dark-green: #0b3d24;
+    --gold: #e6a62c;
+    --light-green: #eaf5ed;
+    --dark: #172019;
+    --gray: #647067;
+    --light: #f7f9f6;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background: white;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 20px rgba(0, 0, 0, .07);
+}
+
+.nav {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--dark-green);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #405047;
+    font-weight: 700;
+    transition: .2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--green);
+}
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    background:
+        url("https://media.potatopro.com/kenya-potato-variety-shangi-1200.jpg?crop=smart&height=743&mode=crop&width=1200")
+        center / cover no-repeat;
+}
+
+.hero-overlay {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 35, 19, .90),
+            rgba(5, 35, 19, .58),
+            rgba(5, 35, 19, .15)
+        );
+}
+
+.hero-text {
+    max-width: 700px;
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.13);
+
+    border:
+        1px solid rgba(255,255,255,.3);
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size:
+        clamp(42px, 6vw, 76px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f5c65c;
+}
+
+.hero p {
+    max-width: 600px;
+
+    font-size: 20px;
+
+    color: #f3f7f3;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    border: 0;
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.14);
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: #17120a;
+}
+
+.btn-dark {
+    background: var(--dark-green);
+    color: white;
+}
+
+.btn-white {
+    background: white;
+    color: var(--dark-green);
+}
+
+.btn-whatsapp {
+    background: #20bd5a;
+    color: white;
+}
+
+
+/* TRUST BAR */
+
+.trust-bar {
+    background: var(--dark-green);
+    color: white;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.trust-grid div {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border-right:
+        1px solid rgba(255,255,255,.10);
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 90px 0;
+}
+
+.light-section {
+    background: var(--light);
+}
+
+.green-section {
+    background: var(--dark-green);
+    color: white;
+}
+
+.section-heading {
+    max-width: 700px;
+
+    text-align: center;
+
+    margin:
+        0 auto 50px;
+}
+
+.section-label {
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.section-label.light {
+    color: #f5c65c;
+}
+
+h2 {
+    font-size:
+        clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    margin:
+        12px 0 20px;
+}
+
+.section-heading p {
+    color: var(--gray);
+}
+
+
+/* TWO COLUMN */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.two-column p {
+    color: var(--gray);
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: var(--green);
+    font-weight: 800;
+}
+
+.image-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.10);
+}
+
+.image-card img {
+    width: 100%;
+    height: 480px;
+
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(5,30,18,.86);
+
+    color: white;
+}
+
+.image-caption span {
+    display: block;
+
+    color: #cddbd1;
+
+    font-size: 14px;
+}
+
+
+/* PRICE */
+
+.main-price-card {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.10);
+}
+
+.price-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+
+    object-fit: cover;
+}
+
+.price-content {
+    padding: 50px;
+}
+
+.product-tag {
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.price-content h3 {
+    font-size: 30px;
+
+    margin:
+        12px 0 5px;
+}
+
+.big-price {
+    color: var(--green);
+
+    font-size: 46px;
+
+    font-weight: 900;
+
+    line-height: 1.1;
+
+    margin:
+        10px 0 3px;
+}
+
+.per-kg {
+    color: var(--gray);
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.price-content p {
+    color: var(--gray);
+}
+
+
+/* FEATURES */
+
+.features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.feature {
+    padding: 30px;
+
+    background: white;
+
+    border:
+        1px solid #e7ece8;
+
+    border-radius: 14px;
+}
+
+.feature-icon {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: var(--gray);
+}
+
+
+/* M-PESA */
+
+.payment-section {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.payment-section p {
+    color: #dbe8de;
+
+    max-width: 600px;
+}
+
+.mpesa-card {
+    min-width: 330px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: white;
+
+    color: var(--dark);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.15);
+}
+
+.mpesa-logo {
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: #22a447;
+
+    color: white;
+
+    font-weight: 900;
+}
+
+.mpesa-card span {
+    display: block;
+
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.mpesa-card strong {
+    display: block;
+
+    color: var(--dark-green);
+
+    font-size: 23px;
+}
+
+.mpesa-card small {
+    color: var(--gray);
+}
+
+
+/* CTA */
+
+.cta {
+    padding: 70px 0;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--dark-green)
+        );
+}
+
+.cta-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.cta h2 {
+    margin-bottom: 8px;
+}
+
+.cta p {
+    color: #dbe8de;
+}
+
+.cta-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #071d11;
+    color: #dbe8de;
+}
+
+.footer-grid {
+    padding: 55px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-logo {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.footer-grid p {
+    max-width: 400px;
+
+    color: #aebfb3;
+}
+
+.footer-grid h4 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.footer-grid a,
+.footer-grid span {
+    display: block;
+
+    margin: 7px 0;
+
+    color: #b8c8bd;
+}
+
+.copyright {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    color: #91a497;
+
+    font-size: 13px;
+}
+
+
+/* WHATSAPP */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #20bd5a;
+
+    color: white;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    z-index: 999;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        background: white;
+
+        box-shadow:
+            0 10px 20px rgba(0,0,0,.1);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hero,
+    .hero-overlay {
+        min-height: 600px;
+    }
+
+    .trust-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .main-price-card {
+        grid-template-columns: 1fr;
+    }
+
+    .price-image img {
+        height: 350px;
+        min-height: 0;
+    }
+
+    .features {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .payment-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .price-content {
+        padding: 30px 24px;
+    }
+
+    .big-price {
+        font-size: 38px;
+    }
+
+    .mpesa-card {
+        min-width: 0;
+        width: 100%;
+    }
+}
